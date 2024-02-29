@@ -11,9 +11,10 @@ public class CacheService {
     @Autowired
     private StatisticService statisticService;
 
-    @Scheduled(initialDelay = 30000, fixedRate = 30000)
+    @Scheduled(initialDelay = 6000, fixedRate = 6000)
     public void updateStatistics() {
         statisticService.updateStatisticsFromJsonFile();
+        System.out.println("updated");
     }
 
     @Scheduled(initialDelay = 1800000, fixedRate = 1800000)

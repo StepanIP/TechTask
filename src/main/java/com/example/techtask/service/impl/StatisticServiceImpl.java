@@ -52,7 +52,7 @@ public class StatisticServiceImpl implements StatisticService {
             ObjectMapper objectMapper = new ObjectMapper();
             Statistic statistics = objectMapper.readValue(path.toFile(), Statistic.class);
 
-            String existingId = "65df6f2e89976fc0db6665be";
+            String existingId = statisticRepository.findAll().get(0).getId();
 
             statistics.setId(existingId);
 
